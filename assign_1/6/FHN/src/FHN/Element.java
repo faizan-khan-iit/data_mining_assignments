@@ -6,6 +6,7 @@ package FHN;
 
 public class Element 
 {
+	// The three variables as described in the paper:
 	/* transaction id */
 	final int tid ;   
 	/* itemset utility */

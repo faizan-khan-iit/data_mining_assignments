@@ -162,6 +162,9 @@ public class Algo
 				// for that transaction
 				String utilityValues[] = split[2].split(" ");
 				
+				//****** BUG FIX 2016 *****
+				// We will not trust the transaction utility value in the input file.
+				// We will calculate it again.
 				// First, we will convert the utility values to integer
 				// and calculate the transaction utility WITH negative values
 				//   (this is necessary to calculate the relative utility of itemsets)
@@ -180,6 +183,7 @@ public class Algo
 						transactionUtilityWithPositive += utilityValuesInt[j];
 					}
 				}
+				//****** END BUG FIX 2016 *****
 				
 				// get the period id
 				int period = Integer.parseInt(split[3]);
